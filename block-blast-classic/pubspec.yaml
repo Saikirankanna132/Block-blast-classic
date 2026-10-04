@@ -1,0 +1,48 @@
+# Block Blast Classic — a relaxing block puzzle game for Android & iOS.
+# Built with Flutter. See README.md for build instructions (including Termux).
+
+name: block_blast_classic
+description: A relaxing classic block puzzle game. Drag blocks onto a 10x10 grid, clear rows and columns, chase your high score.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.2.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # Local persistence for high score, stats and settings (offline-first).
+  shared_preferences: ^2.2.3
+  # Sound effects + background music.
+  audioplayers: ^6.1.0
+  # Subtle vibration feedback on placement.
+  vibration: ^2.0.0
+  # App icons / splash generation (dev use: dart run flutter_launcher_icons).
+  flutter_launcher_icons: ^0.14.2
+  flutter_native_splash: ^2.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/sounds/
+    - assets/icons/
+
+# App icon generation:  dart run flutter_launcher_icons
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/app_icon.png"
+
+# Splash screen generation:  dart run flutter_native_splash:create
+flutter_native_splash:
+  color: "#FFB74D"
+  image: assets/images/logo.png
+  android: true
+  ios: true
