@@ -17,7 +17,7 @@ dependencies:
   # Sound effects + background music.
   audioplayers: ^6.1.0
   # Subtle vibration feedback on placement.
-  vibration: ^2.0.0
+  vibration: ">=3.1.0 <3.2.0"
   # App icons / splash generation (dev use: dart run flutter_launcher_icons).
   flutter_launcher_icons: ^0.14.2
   flutter_native_splash: ^2.4.0
